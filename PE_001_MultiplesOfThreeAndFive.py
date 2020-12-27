@@ -1,4 +1,3 @@
-from functools import reduce
 from time import time
 
 # == Project Euler: Problem 1 ==================================================================== #
