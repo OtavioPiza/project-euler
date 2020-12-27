@@ -11,22 +11,25 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 sum of the even-valued terms.
 """
 
-# == Solution 1 ================================================================================== #
+# == Common Code ================================================================================= #
 
 
 def get_fibonacci_sequence(upperbound):
     sequence = [1, 2]
 
     while True:
-        number = sequence[-1] + sequence[-2]
+        num = sequence[-1] + sequence[-2]
 
-        if number > upperbound:
+        if num > upperbound:
             break
 
         else:
-            sequence.append(number)
+            sequence.append(num)
 
     return sequence
+
+
+# == Solution 1 ================================================================================== #
 
 
 def solution_1(upperbound=4000000):
@@ -43,4 +46,22 @@ def solution_1(upperbound=4000000):
     print(f'The answer is: {total}')
     print(f'That took {time_elapsed}ms')
 
+
+# == Solution 2 ================================================================================== #
+
+
+def solution_2(upperbound=4000000):
+    """
+    Solution 1 Refactored
+
+    :param upperbound:
+    :return:
+    """
+    time_elapsed = time()
+    total = sum(filter(lambda number: not number % 2, get_fibonacci_sequence(upperbound)))
+
+    time_elapsed = (time() - time_elapsed) * 1000
+
+    print(f'The answer is: {total}')
+    print(f'That took {time_elapsed}ms')
 
