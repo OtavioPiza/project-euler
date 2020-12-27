@@ -49,5 +49,3 @@ def solution_1(lower_bound=100, upper_bound=999):
 
     print(f'The answer is: {answer}')
     print(f'That took {time_elapsed}ms')
-
-
