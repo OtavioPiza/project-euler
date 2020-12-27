@@ -73,4 +73,3 @@ def solution_1(upper_bound=20):
 
     print(f'The answer is: {answer}')
     print(f'That took {time_elapsed}ms')
-
