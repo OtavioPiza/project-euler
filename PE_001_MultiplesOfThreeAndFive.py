@@ -31,6 +31,13 @@ def solution_1(upperbound=1000):
 
 
 def solution_2(upperbound=1000):
+    """
+    Solution 1 refactored
+
+    :param upperbound:
+    :return:
+    """
+
     time_elapsed = time()
     total = sum(filter(lambda number: not number % 3 or not number % 5, range(3, upperbound)))
     time_elapsed = (time() - time_elapsed) * 1000
