@@ -64,4 +64,3 @@ def solution_2(upper_bound=4000000):
 
     print(f'The answer is: {total}')
     print(f'That took {time_elapsed}ms')
-
