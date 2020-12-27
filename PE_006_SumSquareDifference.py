@@ -6,6 +6,8 @@ Find the difference between the sum of the squares of the first one hundred natu
 square of the sum.
 """
 
+# == Solution 1 ================================================================================== #
+
 
 def solution_1(upper_bound=101):
     """
