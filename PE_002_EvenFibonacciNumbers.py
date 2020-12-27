@@ -14,13 +14,13 @@ sum of the even-valued terms.
 # == Common Code ================================================================================= #
 
 
-def get_fibonacci_sequence(upperbound):
+def get_fibonacci_sequence(upper_bound):
     sequence = [1, 2]
 
     while True:
         num = sequence[-1] + sequence[-2]
 
-        if num > upperbound:
+        if num > upper_bound:
             break
 
         else:
@@ -32,11 +32,11 @@ def get_fibonacci_sequence(upperbound):
 # == Solution 1 ================================================================================== #
 
 
-def solution_1(upperbound=4000000):
+def solution_1(upper_bound=4000000):
     time_elapsed = time()
     total = 0
 
-    for number in get_fibonacci_sequence(upperbound):
+    for number in get_fibonacci_sequence(upper_bound):
 
         if number % 2 == 0:
             total += number
@@ -50,15 +50,15 @@ def solution_1(upperbound=4000000):
 # == Solution 2 ================================================================================== #
 
 
-def solution_2(upperbound=4000000):
+def solution_2(upper_bound=4000000):
     """
     Solution 1 Refactored
 
-    :param upperbound:
+    :param upper_bound:
     :return:
     """
     time_elapsed = time()
-    total = sum(filter(lambda number: not number % 2, get_fibonacci_sequence(upperbound)))
+    total = sum(filter(lambda number: not number % 2, get_fibonacci_sequence(upper_bound)))
 
     time_elapsed = (time() - time_elapsed) * 1000
 

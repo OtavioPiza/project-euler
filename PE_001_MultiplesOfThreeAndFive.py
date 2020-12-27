@@ -9,12 +9,12 @@ The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 be
 # == Solution 1 ================================================================================== #
 
 
-def solution_1(upperbound=1000):
+def solution_1(upper_bound=1000):
     time_elapsed = time()
     iterations = 0
     total = 0
 
-    for number in range(3, upperbound):
+    for number in range(3, upper_bound):
         iterations += 1
 
         if number % 3 == 0 or number % 5 == 0:
@@ -30,16 +30,16 @@ def solution_1(upperbound=1000):
 # == Solution 2 ================================================================================== #
 
 
-def solution_2(upperbound=1000):
+def solution_2(upper_bound=1000):
     """
     Solution 1 refactored
 
-    :param upperbound:
+    :param upper_bound:
     :return:
     """
 
     time_elapsed = time()
-    total = sum(filter(lambda number: not number % 3 or not number % 5, range(3, upperbound)))
+    total = sum(filter(lambda number: not number % 3 or not number % 5, range(3, upper_bound)))
     time_elapsed = (time() - time_elapsed) * 1000
 
     print('Finished')
