@@ -12,31 +12,49 @@ from 1 to 20?
 # == Solution 1 ================================================================================== #
 
 
+def get_primes(upper_bound):
+    """
+    Generates a tuple with the primes up to the specified bound
+
+    :param upper_bound: max possible prime non-inclusive
+    :return: tuple with all the primes less than the upper bound
+    """
+    assert (upper_bound > 2)
+
+    primes = [2]
+
+    for number in range(3, upper_bound, 2):
+        divisor_upper_bound = round(sqrt(number) + 1)
+        is_prime = True
+
+        for divisor in primes:
+
+            if divisor > divisor_upper_bound:
+                break
+
+            if not number % divisor:
+                is_prime = False
+                break
+
+        if is_prime:
+            primes.append(number)
+
+    return tuple(primes)
+
+
 def solution_1(upper_bound=20):
+    """
+    This solutions first generates a list of all primes less than the upper bound and then
+    iterates from 2 to upper_bound and storing the largest occurrence of a prime in each number in
+    that range
+
+    :param upper_bound:
+    :return:
+    """
+    assert upper_bound > 2
+
     time_elapsed = time()
-
-    def get_primes():
-        primes = [2]
-
-        for number in range(3, upper_bound, 2):
-            max_divisor = round(sqrt(number) + 1)
-            is_prime = True
-
-            for divisor in primes:
-
-                if not number % divisor:
-                    is_prime = False
-                    break;
-
-                if divisor > max_divisor:
-                    break
-
-            if is_prime:
-                primes.append(number)
-
-        return tuple(primes)
-
-    primes = {}.fromkeys(get_primes(), 0)
+    primes = {}.fromkeys(get_primes(upper_bound), 0)
 
     for number in range(2, upper_bound):
 
