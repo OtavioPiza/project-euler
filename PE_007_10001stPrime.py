@@ -60,7 +60,7 @@ def solution_2(index=10001):
     assert index > 1 and type(index) == int
 
     time_elapsed = time()
-    primes_found = 2
+    primes_found = 1
     last_prime = 2
     number = 1
 
@@ -84,3 +84,10 @@ def solution_2(index=10001):
     print(f'The answer is: {last_prime}')
     print(f'That took {time_elapsed}ms')
 
+
+if __name__ == '__main__':
+    print('Solution 1')
+    solution_1(100000)
+
+    print('Solution 2')
+    solution_2(100000)
