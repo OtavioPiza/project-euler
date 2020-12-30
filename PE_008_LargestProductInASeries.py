@@ -72,7 +72,7 @@ def solution_1(series_size=13):
         if new:
             new = False
 
-            for index in range(start_index, start_index + series_size):
+            for index in range(start_index + series_size - 1, start_index - 1, -1):
 
                 if series[index] == 0:
                     start_index = index
@@ -91,7 +91,7 @@ def solution_1(series_size=13):
                 new = True
 
             else:
-                product = series[start_index + series_size - 1] * product / series[start_index - 1]
+                product = series[start_index + series_size - 1] * product // series[start_index - 1]
 
         if product > answer:
             answer = product
@@ -106,4 +106,3 @@ def solution_1(series_size=13):
 
 if __name__ == '__main__':
     solution_1()
-    print(len(series))
