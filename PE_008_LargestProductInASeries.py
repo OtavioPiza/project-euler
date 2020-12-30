@@ -1,4 +1,3 @@
-from functools import reduce
 from time import time
 
 # == Project Euler: Problem 5 ======================================================================================== #
@@ -64,29 +63,40 @@ def solution_1(series_size=13):
 
     time_elapsed = time()
     start_index = 0
+    product = 1
     answer = -1
     new = True
 
     while start_index < len(series) - series_size:
-        product = 1
-        print(series[start_index:start_index + series_size], end=' -> ')
 
-        for index in range(start_index, start_index + series_size):
+        if new:
+            new = False
 
-            if series[index] == 0:
-                start_index = index
+            for index in range(start_index, start_index + series_size):
+
+                if series[index] == 0:
+                    start_index = index
+                    product = 1
+                    new = True
+                    break
+
+                else:
+                    product *= series[index]
+
+        else:
+
+            if series[start_index + series_size - 1] == 0:
+                start_index = start_index + series_size - 1
                 product = 1
-                break
+                new = True
 
             else:
-                product *= series[index]
-
-        start_index += 1
-
-        print(f'product: {product}')
+                product = series[start_index + series_size - 1] * product / series[start_index - 1]
 
         if product > answer:
             answer = product
+
+        start_index += 1
 
     time_elapsed = (time() - time_elapsed) * 1000
 
