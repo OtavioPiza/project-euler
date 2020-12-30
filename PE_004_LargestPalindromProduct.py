@@ -49,3 +49,8 @@ def solution_1(lower_bound=100, upper_bound=999):
 
     print(f'The answer is: {answer}')
     print(f'That took {time_elapsed}ms')
+
+
+if __name__ == '__main__':
+    print('Solution 1')
+    solution_1()
