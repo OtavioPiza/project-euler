@@ -1,3 +1,4 @@
+from functools import reduce
 from time import time
 
 # == Project Euler: Problem 5 ======================================================================================== #
@@ -58,10 +59,20 @@ number = tuple(map(int, filter(lambda char: char.isnumeric(), '''
 
 
 def solution_1(series_size=13):
+    """
+    This solutions uses the fact that the next product in a series can be obtained by dividing the previous product by
+    its first term and multiplying it by the term after its last. Moreover, this solutions takes in account that once a
+    zero is found in a series, the number after it can become the next starting point since all products including it
+    would result in zero.
+
+    :param series_size:
+    :return:
+    """
+
     time_elapsed = time()
     start_index = 0
     product = 1
-    answer = -1
+    answer = 0
     new = True
 
     while start_index < len(number) - series_size:
@@ -101,5 +112,29 @@ def solution_1(series_size=13):
     print(f'That took {time_elapsed}ms')
 
 
+# == Solution 2 ====================================================================================================== #
+
+
+def solution_2(series_size=13):
+    time_elapsed = time()
+    answer = 0
+
+    for start in range(0, len(number) - series_size):
+        subset = number[start:start + series_size]
+        product = reduce(lambda a, b: a * b, subset)
+
+        if product > answer:
+            answer = product
+
+    time_elapsed = (time() - time_elapsed) * 1000
+
+    print(f'The answer is: {answer}')
+    print(f'That took {time_elapsed}ms')
+
+
 if __name__ == '__main__':
+    print('Solution 1')
     solution_1()
+
+    print('Solution 2')
+    solution_2()
