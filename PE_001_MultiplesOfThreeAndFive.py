@@ -11,20 +11,17 @@ The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 be
 
 def solution_1(upper_bound=1000):
     time_elapsed = time()
-    iterations = 0
     total = 0
 
     for number in range(3, upper_bound):
-        iterations += 1
 
         if number % 3 == 0 or number % 5 == 0:
             total += number
 
     time_elapsed = (time() - time_elapsed) * 1000
 
-    print('Finished')
-    print(f'That took {time_elapsed}ms and {iterations} iterations')
     print(f'The answer is: {total}')
+    print(f'That took {time_elapsed}ms')
 
 
 # == Solution 2 ================================================================================== #
@@ -42,6 +39,13 @@ def solution_2(upper_bound=1000):
     total = sum(filter(lambda number: not number % 3 or not number % 5, range(3, upper_bound)))
     time_elapsed = (time() - time_elapsed) * 1000
 
-    print('Finished')
-    print(f'That took {time_elapsed}ms')
     print(f'The answer is: {total}')
+    print(f'That took {time_elapsed}ms')
+
+
+if __name__ == '__main__':
+    print('Solution 1')
+    solution_1()
+
+    print('Solution 2')
+    solution_2()
