@@ -64,3 +64,11 @@ def solution_2(upper_bound=4000000):
 
     print(f'The answer is: {total}')
     print(f'That took {time_elapsed}ms')
+
+
+if __name__ == '__main__':
+    print('Solution 1')
+    solution_1()
+
+    print('Solution 2')
+    solution_2()
