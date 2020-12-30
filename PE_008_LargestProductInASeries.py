@@ -31,7 +31,7 @@ product?
 
 # == Common code ===================================================================================================== #
 
-series = '''
+number = tuple(map(int, filter(lambda char: char.isnumeric(), '''
 73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
@@ -52,46 +52,43 @@ series = '''
 84580156166097919133875499200524063689912560717606
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
-'''
+''')))
 
 # == Solution 1 ====================================================================================================== #
 
 
 def solution_1(series_size=13):
-    global series
-    series = tuple(map(int, filter(lambda number: number != '\n', series)))
-
     time_elapsed = time()
     start_index = 0
     product = 1
     answer = -1
     new = True
 
-    while start_index < len(series) - series_size:
+    while start_index < len(number) - series_size:
 
         if new:
             new = False
 
             for index in range(start_index + series_size - 1, start_index - 1, -1):
 
-                if series[index] == 0:
+                if number[index] == 0:
                     start_index = index
                     product = 1
                     new = True
                     break
 
                 else:
-                    product *= series[index]
+                    product *= number[index]
 
         else:
 
-            if series[start_index + series_size - 1] == 0:
+            if number[start_index + series_size - 1] == 0:
                 start_index = start_index + series_size - 1
                 product = 1
                 new = True
 
             else:
-                product = series[start_index + series_size - 1] * product // series[start_index - 1]
+                product = number[start_index + series_size - 1] * product // number[start_index - 1]
 
         if product > answer:
             answer = product
