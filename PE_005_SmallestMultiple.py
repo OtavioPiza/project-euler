@@ -73,3 +73,8 @@ def solution_1(upper_bound=20):
 
     print(f'The answer is: {answer}')
     print(f'That took {time_elapsed}ms')
+
+
+if __name__ == '__main__':
+    print('Solution 1')
+    solution_1()
