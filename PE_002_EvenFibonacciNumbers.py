@@ -1,4 +1,4 @@
-from time import time
+from PE_000_Utils import timed
 
 # == Project Euler: Problem 2 ==================================================================== #
 """
@@ -32,8 +32,8 @@ def get_fibonacci_sequence(upper_bound):
 # == Solution 1 ================================================================================== #
 
 
+@timed
 def solution_1(upper_bound=4000000):
-    time_elapsed = time()
     total = 0
 
     for number in get_fibonacci_sequence(upper_bound):
@@ -41,15 +41,12 @@ def solution_1(upper_bound=4000000):
         if number % 2 == 0:
             total += number
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {total}')
-    print(f'That took {time_elapsed}ms')
+    return total
 
 
 # == Solution 2 ================================================================================== #
 
-
+@timed
 def solution_2(upper_bound=4000000):
     """
     Solution 1 Refactored
@@ -57,18 +54,17 @@ def solution_2(upper_bound=4000000):
     :param upper_bound:
     :return:
     """
-    time_elapsed = time()
-    total = sum(filter(lambda number: not number % 2, get_fibonacci_sequence(upper_bound)))
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {total}')
-    print(f'That took {time_elapsed}ms')
+    return sum(filter(lambda number: not number % 2, get_fibonacci_sequence(upper_bound)))
 
 
 if __name__ == '__main__':
-    print('Solution 1')
+    print('Project Euler: Even Fibonacci Numbers')
+
+    print()
+    print('-> Solution 1')
     solution_1()
 
-    print('Solution 2')
+    print()
+    print('-> Solution 2')
     solution_2()
