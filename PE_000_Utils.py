@@ -21,3 +21,12 @@ def timed(function):
         print(f'That took {time_elapsed * 1000}ms')
 
     return run
+
+
+def print_answers(name, *args, params=()):
+    print(f'Project Euler: {name}\n')
+
+    for index in range(len(args)):
+        print(f'-> Solution {index + 1}')
+        args[index](*params)
+        print()
