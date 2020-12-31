@@ -1,3 +1,4 @@
+from PE_000_Utils import timed
 from functools import reduce
 from time import time
 
@@ -58,6 +59,7 @@ number = tuple(map(int, filter(lambda char: char.isnumeric(), '''
 # == Solution 1 ====================================================================================================== #
 
 
+@timed
 def solution_1(series_size=13):
     """
     This solutions uses the fact that the next product in a series can be obtained by dividing the previous product by
@@ -69,7 +71,6 @@ def solution_1(series_size=13):
     :return:
     """
 
-    time_elapsed = time()
     start_index = 0
     product = 1
     answer = 0
@@ -106,11 +107,7 @@ def solution_1(series_size=13):
 
         start_index += 1
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
-
+    return answer
 
 # == Solution 2 ====================================================================================================== #
 
