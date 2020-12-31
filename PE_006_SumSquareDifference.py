@@ -1,4 +1,4 @@
-from time import time
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 6 ==================================================================== #
 """
@@ -6,9 +6,11 @@ Find the difference between the sum of the squares of the first one hundred natu
 square of the sum.
 """
 
+
 # == Solution 1 ================================================================================== #
 
 
+@timed
 def solution_1(upper_bound=101):
     """
     Calculates the difference between the square of the sum and the sum of the square
@@ -17,15 +19,9 @@ def solution_1(upper_bound=101):
     :return:
     """
 
-    time_elapsed = time()
-    answer = int((upper_bound - 1) * upper_bound / 2) ** 2 - sum(map(lambda number: number ** 2,
-                                                                     range(upper_bound)))
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
+    return int((upper_bound - 1) * upper_bound / 2) ** 2 - sum(map(lambda number: number ** 2,
+                                                                   range(upper_bound)))
 
 
 if __name__ == '__main__':
-    print('Solution 1')
-    solution_1()
+    print_answers('Sum Square Difference', solution_1)
