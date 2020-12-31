@@ -1,4 +1,4 @@
-from time import time
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 9 ======================================================================================== #
 """
@@ -14,6 +14,7 @@ Find the product abc.
 # == Solution 1 ====================================================================================================== #
 
 
+@timed
 def solution_1(abc_sum=1000):
     """
     This solution uses Euclid's formula to generate pythagorean triples
@@ -31,7 +32,6 @@ def solution_1(abc_sum=1000):
     """
     assert not abc_sum % 2
 
-    time_elapsed = time()
     answer = -1
     current_sum = -1
     abc_sum //= 2
@@ -57,12 +57,8 @@ def solution_1(abc_sum=1000):
 
             current_sum -= m*n  # this way we do not have to keep the operation m**2 unnecessarily
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
+    return answer
 
 
 if __name__ == '__main__':
-    print('Solution 1')
-    solution_1()
+    print_answers('Special Pythagorean Triplet', solution_1)
