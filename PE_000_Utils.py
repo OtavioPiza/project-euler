@@ -3,15 +3,21 @@ from time import time
 
 
 def timed(function):
+    """
+    This decorator serves to the execution time of the function it decorates
+
+    :param function:
+    :return:
+    """
 
     @wraps(function)
     def run(*args, **kwargs):
-        time_elapsed = time()
+        elapsed = time()
 
         answer = function(*args, *kwargs)
-        time_elapsed = (time() - time_elapsed) * 1000
+        time_elapsed = time() - elapsed
 
         print(f'The answer is: {answer}')
-        print(f'That took {time_elapsed}ms')
+        print(f'That took {time_elapsed * 1000}ms')
 
     return run
