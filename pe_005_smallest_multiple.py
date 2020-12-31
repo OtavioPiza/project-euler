@@ -1,6 +1,6 @@
 from functools import reduce
 from math import sqrt
-from PE_000_Utils import print_answers, timed
+from pe_000_utils import print_answers, timed
 
 # == Project Euler: Problem ====================================================================== #
 

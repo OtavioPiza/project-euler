@@ -1,5 +1,5 @@
 from math import sqrt
-from PE_000_Utils import timed, print_answers
+from pe_000_utils import timed, print_answers
 
 # == Project Euler: Problem 3 ==================================================================== #
 """

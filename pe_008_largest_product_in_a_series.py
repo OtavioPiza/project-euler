@@ -1,4 +1,4 @@
-from PE_000_Utils import timed, print_answers
+from pe_000_utils import timed, print_answers
 from functools import reduce
 
 # == Project Euler: Problem 5 ======================================================================================== #
