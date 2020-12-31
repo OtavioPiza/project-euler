@@ -1,5 +1,5 @@
 from math import sqrt
-from time import time
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 10 ======================================================================================= #
 """
@@ -10,8 +10,8 @@ Find the sum of all the primes below two million.
 # == Solution 1 ====================================================================================================== #
 
 
+@timed
 def solution_1(upper_bound=2000000):
-    time_elapsed = time()
     primes = [2]
 
     for number in range(3, upper_bound, 2):
@@ -30,13 +30,8 @@ def solution_1(upper_bound=2000000):
         if is_prime:
             primes.append(number)
 
-    answer = sum(primes)
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
+    return sum(primes)
 
 
 if __name__ == '__main__':
-    print('Solution 1')
-    solution_1()
+    print_answers('Summation Of Primes', solution_1)
