@@ -1,4 +1,4 @@
-from PE_000_Utils import timed
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 2 ==================================================================== #
 """
@@ -59,12 +59,4 @@ def solution_2(upper_bound=4000000):
 
 
 if __name__ == '__main__':
-    print('Project Euler: Even Fibonacci Numbers')
-
-    print()
-    print('-> Solution 1')
-    solution_1()
-
-    print()
-    print('-> Solution 2')
-    solution_2()
+    print_answers('Even Fibonacci Numbers', solution_1, solution_2)
