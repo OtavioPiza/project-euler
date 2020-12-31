@@ -1,4 +1,4 @@
-from time import time
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 11 ======================================================================================= #
 """
@@ -59,14 +59,10 @@ grid = tuple(map(lambda line: tuple(map(int, line.split(' '))),
 
 # == Solution 1 ====================================================================================================== #
 
-
+@timed
 def solution_1():
-    time_elapsed = time()
-    answer = 0
+    return -1
 
 
-
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
+if __name__ == '__main__':
+    print_answers('Largest Product in a Grid', solution_1)
