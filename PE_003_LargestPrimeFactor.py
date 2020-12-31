@@ -1,5 +1,5 @@
 from math import sqrt
-from PE_000_Utils import timed
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 3 ==================================================================== #
 """
@@ -47,9 +47,5 @@ def solution_1(number=600851475143):
 
 
 if __name__ == '__main__':
-    print('Project Euler: Largest Prime Factor')
-
-    print()
-    print('-> Solution 1')
-    solution_1()
+    print_answers('Largest Prime Factor', solution_1)
 
