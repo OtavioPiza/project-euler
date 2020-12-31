@@ -1,8 +1,9 @@
+from pe_008_largest_product_in_a_series import solution_1 as largest_product_in_series
 from pe_000_utils import timed, print_answers
 
 # == Project Euler: Problem 11 ======================================================================================= #
 """
-In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
+In the 20×20 grid below, four lines along a diagonal line have been marked in red.
 
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -25,9 +26,9 @@ In the 20×20 grid below, four numbers along a diagonal line have been marked in
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 
-The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
+The product of these lines is 26 × 63 × 78 × 14 = 1788696.
 
-What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in
+What is the greatest product of four adjacent lines in the same direction (up, down, left, right, or diagonally) in
 the 20×20 grid?
 """
 
@@ -57,11 +58,81 @@ grid = tuple(map(lambda line: tuple(map(int, line.split(' '))),
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48'''.split('\n')))
 
 
+# == Code from Problem 8 ============================================================================================= #
+
+
+# noinspection DuplicatedCode
+def largest_product_in_series(series_size, number):
+    """
+    This solutions uses the fact that the next product in a series can be obtained by dividing the previous product by
+    its first term and multiplying it by the term after its last. Moreover, this solutions takes in account that once a
+    zero is found in a series, the number after it can become the next starting point since all products including it
+    would result in zero.
+
+    :param number:
+    :param series_size:
+    :return:
+    """
+
+    start_index = 0
+    product = 1
+    answer = 0
+    new = True
+
+    while start_index < len(number) - series_size:
+
+        if new:
+            new = False
+
+            for index in range(start_index + series_size - 1, start_index - 1, -1):
+
+                if number[index] == 0:
+                    start_index = index
+                    product = 1
+                    new = True
+                    break
+
+                else:
+                    product *= number[index]
+
+        else:
+
+            if number[start_index + series_size - 1] == 0:
+                start_index = start_index + series_size - 1
+                product = 1
+                new = True
+
+            else:
+                product = number[start_index + series_size - 1] * product // number[start_index - 1]
+
+        if product > answer:
+            answer = product
+
+        start_index += 1
+
+    return answer
+
+
 # == Solution 1 ====================================================================================================== #
 
 @timed
-def solution_1():
-    return -1
+def solution_1(size=4):
+    answer = -1
+
+    for line in grid:
+        product = largest_product_in_series(4, line)
+
+        if answer < product:
+            answer = product
+
+    for j in range(len(grid[0])):
+        product = largest_product_in_series(4, tuple(i[j] for i in grid))
+
+        if answer < product:
+            answer = product
+
+
+    return answer
 
 
 if __name__ == '__main__':
