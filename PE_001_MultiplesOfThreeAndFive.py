@@ -1,4 +1,4 @@
-from PE_000_Utils import timed
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 1 ==================================================================== #
 """
@@ -36,12 +36,4 @@ def solution_2(upper_bound=1000):
 
 
 if __name__ == '__main__':
-    print('Project Euler: Multiples of Three and Five')
-
-    print()
-    print('-> Solution 1')
-    solution_1()
-
-    print()
-    print('-> Solution 2')
-    solution_2()
+    print_answers('Multiples of Three and Five', solution_1, solution_2)
