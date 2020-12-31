@@ -1,5 +1,5 @@
 from math import sqrt
-from time import time
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 7 ==================================================================== #
 """
@@ -9,6 +9,7 @@ What is the 10 001st prime number?
 # == Solution 1 ================================================================================== #
 
 
+@timed
 def solution_1(index=10001):
     """
     This solutions uses the previous primes to more efficiently test for primality at the cost of
@@ -19,7 +20,6 @@ def solution_1(index=10001):
     """
     assert index > 0 and type(index) == int
 
-    time_elapsed = time()
     number = 1
     primes = [2]
 
@@ -40,15 +40,12 @@ def solution_1(index=10001):
         if is_prime:
             primes.append(number)
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {primes[-1]}')
-    print(f'That took {time_elapsed}ms')
-
+    return primes[-1]
 
 # == Solution 2 ================================================================================== #
 
 
+@timed
 def solution_2(index=10001):
     """
     This solution does not store previous primes to use them to check for primality and is thus
@@ -59,7 +56,6 @@ def solution_2(index=10001):
     """
     assert index > 1 and type(index) == int
 
-    time_elapsed = time()
     primes_found = 1
     last_prime = 2
     number = 1
@@ -79,15 +75,8 @@ def solution_2(index=10001):
             primes_found += 1
             last_prime = number
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {last_prime}')
-    print(f'That took {time_elapsed}ms')
+    return last_prime
 
 
 if __name__ == '__main__':
-    print('Solution 1')
-    solution_1(100000)
-
-    print('Solution 2')
-    solution_2(100000)
+    print_answers('10001st Prime', solution_1, solution_2)
