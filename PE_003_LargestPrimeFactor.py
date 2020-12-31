@@ -1,5 +1,5 @@
 from math import sqrt
-from time import time
+from PE_000_Utils import timed
 
 # == Project Euler: Problem 3 ==================================================================== #
 """
@@ -9,6 +9,7 @@ What is the largest prime factor of the number 600851475143?
 # == Solution 1 ================================================================================== #
 
 
+@timed
 def solution_1(number=600851475143):
     """
     Brute force solution that uses domain restriction and prime factorization to reduce complexity
@@ -22,7 +23,6 @@ def solution_1(number=600851475143):
     :return:
     """
 
-    time_elapsed = time()
     answer = -1
 
     """
@@ -43,12 +43,13 @@ def solution_1(number=600851475143):
             while not number % divisor:
                 number /= divisor
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
+    return answer
 
 
 if __name__ == '__main__':
-    print('Solution 1')
+    print('Project Euler: Largest Prime Factor')
+
+    print()
+    print('-> Solution 1')
     solution_1()
+
