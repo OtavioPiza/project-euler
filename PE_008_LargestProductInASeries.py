@@ -1,6 +1,5 @@
-from PE_000_Utils import timed
+from PE_000_Utils import timed, print_answers
 from functools import reduce
-from time import time
 
 # == Project Euler: Problem 5 ======================================================================================== #
 """
@@ -112,8 +111,8 @@ def solution_1(series_size=13):
 # == Solution 2 ====================================================================================================== #
 
 
+@timed
 def solution_2(series_size=13):
-    time_elapsed = time()
     answer = 0
 
     for start in range(0, len(number) - series_size):
@@ -123,15 +122,8 @@ def solution_2(series_size=13):
         if product > answer:
             answer = product
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
+    return answer
 
 
 if __name__ == '__main__':
-    print('Solution 1')
-    solution_1()
-
-    print('Solution 2')
-    solution_2()
+    print_answers('Largest Product in a Series', solution_1, solution_2)
