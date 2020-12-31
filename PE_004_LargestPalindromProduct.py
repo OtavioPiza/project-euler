@@ -1,4 +1,4 @@
-from time import time
+from PE_000_Utils import timed, print_answers
 
 # == Project Euler: Problem 4 ==================================================================== #
 """
@@ -11,6 +11,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 # == Solution 1 ================================================================================== #
 
 
+@timed
 def solution_1(lower_bound=100, upper_bound=999):
     """
     This method uses brute force to find the largest palindrome product of two numbers between 
@@ -24,7 +25,6 @@ def solution_1(lower_bound=100, upper_bound=999):
 
     assert (9 < lower_bound < upper_bound)
 
-    time_elapsed = time()
     answer = -1
 
     def is_palindrome(number):
@@ -45,12 +45,8 @@ def solution_1(lower_bound=100, upper_bound=999):
             else:
                 break
 
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
+    return answer
 
 
 if __name__ == '__main__':
-    print('Solution 1')
-    solution_1()
+    print_answers('Larges Palindrome Product', solution_1)
