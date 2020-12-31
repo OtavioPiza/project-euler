@@ -1,8 +1,9 @@
 from functools import reduce
 from math import sqrt
-from time import time
+from PE_000_Utils import print_answers, timed
 
 # == Project Euler: Problem ====================================================================== #
+
 """
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any 
 remainder. What is the smallest positive number that is evenly divisible by all of the numbers 
@@ -42,6 +43,7 @@ def get_primes(upper_bound):
     return tuple(primes)
 
 
+@timed
 def solution_1(upper_bound=20):
     """
     This solutions first generates a list of all primes less than the upper bound and then
@@ -53,7 +55,6 @@ def solution_1(upper_bound=20):
     """
     assert upper_bound > 2
 
-    time_elapsed = time()
     primes = {}.fromkeys(get_primes(upper_bound), 0)
 
     for number in range(2, upper_bound):
@@ -68,13 +69,8 @@ def solution_1(upper_bound=20):
             if total > primes.get(divisor):
                 primes[divisor] = total
 
-    answer = reduce(lambda a, b: a * b, map(lambda item: item[0] ** item[1], primes.items()))
-    time_elapsed = (time() - time_elapsed) * 1000
-
-    print(f'The answer is: {answer}')
-    print(f'That took {time_elapsed}ms')
+    return reduce(lambda a, b: a * b, map(lambda item: item[0] ** item[1], primes.items()))
 
 
 if __name__ == '__main__':
-    print('Solution 1')
-    solution_1()
+    print_answers('Smallest Multiple', solution_1)
