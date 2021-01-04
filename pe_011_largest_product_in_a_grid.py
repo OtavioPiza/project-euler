@@ -1,5 +1,5 @@
-from pe_008_largest_product_in_a_series import solution_1 as largest_product_in_series
 from pe_000_utils import timed, print_answers
+import numpy as np
 
 # == Project Euler: Problem 11 ======================================================================================= #
 """
@@ -76,7 +76,7 @@ def largest_product_in_series(series_size, number):
 
     start_index = 0
     product = 1
-    answer = 0
+    answer = -1
     new = True
 
     while start_index < len(number) - series_size:
@@ -131,6 +131,15 @@ def solution_1(size=4):
         if answer < product:
             answer = product
 
+    a = np.array(grid)
+    diagonals = [a[::-1, :].diagonal(i) for i in range(-a.shape[0] + 1, a.shape[1])]
+    diagonals.extend(a.diagonal(i) for i in range(a.shape[1] - 1, -a.shape[0], -1))
+
+    for diagonal in (n.tolist() for n in diagonals):
+        product = largest_product_in_series(4, diagonal)
+
+        if product > answer:
+            answer = product
 
     return answer
 
