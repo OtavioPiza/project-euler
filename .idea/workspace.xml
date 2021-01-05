@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cce718c-fcbc-4f11-bc7e-721c54065902" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-euler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project-euler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pe_011_largest_product_in_a_grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/pe_011_largest_product_in_a_grid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.pe_011_largest_product_in_a_grid">
@@ -56,6 +52,9 @@
       <module name="project-euler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -98,6 +97,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.pe_011_largest_product_in_a_grid" />
+        <item itemvalue="Python.pe_011_largest_product_in_a_grid" />
         <item itemvalue="Python.pe_000_utils" />
       </list>
     </recent_temporary>
@@ -111,6 +111,8 @@
       <option name="presentableId" value="Default" />
       <updated>1609731945208</updated>
       <workItem from="1609731948696" duration="536000" />
+      <workItem from="1609816188625" duration="100000" />
+      <workItem from="1609854988904" duration="392000" />
     </task>
     <servers />
   </component>
@@ -127,5 +129,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
