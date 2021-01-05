@@ -14,7 +14,7 @@ sum of the even-valued terms.
 # == Common Code ================================================================================= #
 
 
-def get_fibonacci_sequence(upper_bound):
+def get_fibonacci_sequence(upper_bound: int = 4000000) -> list:
     sequence = [1, 2]
 
     while True:
@@ -33,7 +33,7 @@ def get_fibonacci_sequence(upper_bound):
 
 
 @timed
-def solution_1(upper_bound=4000000):
+def solution_1(upper_bound: int = 4000000) -> int:
     total = 0
 
     for number in get_fibonacci_sequence(upper_bound):
@@ -47,7 +47,7 @@ def solution_1(upper_bound=4000000):
 # == Solution 2 ================================================================================== #
 
 @timed
-def solution_2(upper_bound=4000000):
+def solution_2(upper_bound: int = 4000000) -> int:
     """
     Solution 1 Refactored
 

@@ -12,7 +12,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 
 @timed
-def solution_1(lower_bound=100, upper_bound=999):
+def solution_1(lower_bound: int = 100, upper_bound: int = 999) -> int:
     """
     This method uses brute force to find the largest palindrome product of two numbers between 
     the lower and upper bound. To make this method more efficient we take advantage of the fact

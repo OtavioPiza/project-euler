@@ -10,7 +10,7 @@ The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 be
 
 
 @timed
-def solution_1(upper_bound=1000):
+def solution_1(upper_bound: int = 1000) -> int:
     total = 0
 
     for number in range(3, upper_bound):
@@ -24,7 +24,7 @@ def solution_1(upper_bound=1000):
 
 
 @timed
-def solution_2(upper_bound=1000):
+def solution_2(upper_bound: int = 1000) -> int:
     """
     Solution 1 refactored
 

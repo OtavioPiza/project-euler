@@ -10,7 +10,7 @@ What is the largest prime factor of the number 600851475143?
 
 
 @timed
-def solution_1(number=600851475143):
+def solution_1(number: int = 600851475143) -> int:
     """
     Brute force solution that uses domain restriction and prime factorization to reduce complexity
 
