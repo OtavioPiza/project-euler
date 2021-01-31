@@ -138,6 +138,7 @@ def solution_2(min_divisors=500):
 
     while current_divisors < min_divisors:
         index += 1
+        current_divisors = 1
         number = (index + 1) * index // 2
 
         for exponent in get_factors(number, primes):
