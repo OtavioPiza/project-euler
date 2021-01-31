@@ -14,7 +14,7 @@ def timed(function):
     def run(*args, **kwargs):
         elapsed = time()
 
-        answer = function(*args, *kwargs)
+        answer = function(*args, **kwargs)
         time_elapsed = time() - elapsed
 
         print(f'The answer is: {answer}')
