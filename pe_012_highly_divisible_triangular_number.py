@@ -107,6 +107,14 @@ def get_factors(number: int, primes: Tuple[int]) -> Tuple:
 
 @timed
 def solution_1(min_divisors=500):
+    """
+    This solution uses prime factorization and the fact that a triangular number is given by k * (k + 1) / 2, where k
+    k + 1 are coprime to reuse the divisors of k + 1 in the next iteration of the algorithm
+
+    :param min_divisors:
+    :return:
+    """
+
     primes = get_primes(500)
     current_divisors = 1
     previous_divisors = 1
@@ -132,6 +140,13 @@ def solution_1(min_divisors=500):
 
 @timed
 def solution_2(min_divisors=500):
+    """
+    This solution uses prime factorization to find the divisors of a triangular number
+
+    :param min_divisors:
+    :return:
+    """
+
     primes = get_primes(500)
     current_divisors = 1
     index = 1
