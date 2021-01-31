@@ -42,7 +42,7 @@ def next_candidate() -> Iterable:
         yield number
 
 
-def get_primes(quantity: int) -> Tuple[int]:
+def get_primes(quantity: int) -> Tuple:
     primes = [2, 3, 5, 7]
 
     for number in next_candidate():
@@ -64,23 +64,61 @@ def get_primes(quantity: int) -> Tuple[int]:
             return tuple(primes)
 
 
+def get_next_prime(primes: Tuple) -> Tuple:
+
+    for number in next_candidate():
+        is_prime = True
+
+        for divisor in primes:
+
+            if divisor > sqrt(number) + 1:
+                break
+
+            if not number % divisor:
+                is_prime = False
+                break
+
+        if is_prime:
+            return primes + (number, )
+
+
+def get_factors(number: int, primes: Tuple[int]) -> Tuple:
+    factors = []
+
+    for divisor in primes:
+
+        if divisor > number:
+            break
+
+        if not number % divisor:
+            exponent = 1
+            number //= divisor
+
+            while not number % divisor:
+                exponent += 1
+                number //= divisor
+
+            factors.append(exponent)
+
+    return tuple(factors)
+
+
 @timed
 def solution_1(min_divisors=500):
-    current_divisors = 0
+    primes = get_primes(500)
     number = 0
 
     while True:
         number += 1
-        triangular_number = number * (number + 1) // 2
-        current_divisors = 2
+        current_divisors = 1
 
-        for divisor in range(2, triangular_number):
-            if not triangular_number % divisor:
-                current_divisors += 1
+        for exponent in get_factors(number * (number + 1) // 2, primes):
+            current_divisors *= exponent + 1
 
         if current_divisors > min_divisors:
-            return triangular_number
+            return number * (number + 1) // 2
 
 
 if __name__ == '__main__':
-    get_primes(500)
+    print(solution_1(500))
+
