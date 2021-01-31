@@ -25,7 +25,7 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
 """
 
-# == Solution 1 ====================================================================================================== #
+# == Common Code ===================================================================================================== #
 
 
 def next_candidate() -> Iterable:
@@ -102,23 +102,50 @@ def get_factors(number: int, primes: Tuple[int]) -> Tuple:
 
     return tuple(factors)
 
+# == Solution 1 ====================================================================================================== #
+
 
 @timed
 def solution_1(min_divisors=500):
     primes = get_primes(500)
-    number = 0
+    current_divisors = 1
+    previous_divisors = 1
+    index = 1
 
-    while True:
-        number += 1
+    while previous_divisors * current_divisors < min_divisors:
+        index += 1
+        number = index + 1
+        previous_divisors = current_divisors
         current_divisors = 1
 
-        for exponent in get_factors(number * (number + 1) // 2, primes):
+        if not number % 2:
+            number //= 2
+
+        for exponent in get_factors(number, primes):
             current_divisors *= exponent + 1
 
-        if current_divisors > min_divisors:
-            return number * (number + 1) // 2
+    return index * (index + 1) // 2
+
+
+# == Solution 2 ====================================================================================================== #
+
+
+@timed
+def solution_2(min_divisors=500):
+    primes = get_primes(500)
+    current_divisors = 1
+    index = 1
+
+    while current_divisors < min_divisors:
+        index += 1
+        number = (index + 1) * index // 2
+
+        for exponent in get_factors(number, primes):
+            current_divisors *= exponent + 1
+
+    return index * (index + 1) // 2
 
 
 if __name__ == '__main__':
-    print(solution_1(500))
+    print_answers('Highly Divisible Triangular Numbers', solution_1, solution_2, params=(500,))
 
