@@ -11,7 +11,7 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 @timed
 def solution_1(path: str = 'pe_13_large_sum.txt', limit: int = 10) -> str:
 
-    with open(path) as file:
+    with open(path, mode='r') as file:
         return str(sum(map(int, file.readlines())))[0:limit:]
 
 
