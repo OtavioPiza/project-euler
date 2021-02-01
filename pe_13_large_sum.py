@@ -9,11 +9,11 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 
 
 @timed
-def solution_1(path: str = 'pe_13_large_sum.txt') -> int:
-    
+def solution_1(path: str = 'pe_13_large_sum.txt', limit: int = 10) -> str:
 
-    return 0
+    with open(path) as file:
+        return str(sum(map(int, file.readlines())))[0:limit:]
 
 
-if __name__ == '__name__':
+if __name__ == '__main__':
     print_answers('Large Sum', solution_1)
