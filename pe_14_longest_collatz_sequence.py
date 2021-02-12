@@ -1,4 +1,5 @@
 from pe_000_utils import print_answers, timed
+import matplotlib.pyplot as plt
 
 # == Project Euler: Problem 14 ======================================================================================= #
 """
@@ -30,7 +31,7 @@ def solution_1(upper_limit: int = 1000000) -> int:
     longest = -1
     sequences = {-1: -1}
 
-    for number in range(1, upper_limit, 2):
+    for number in range(1, upper_limit):
         current = number
         length = 1
 
@@ -46,6 +47,9 @@ def solution_1(upper_limit: int = 1000000) -> int:
         sequences[number] = length
         if length > sequences[longest]:
             longest = number
+
+    plt.bar(sequences.keys(), sequences.values())
+    plt.show()
 
     return longest
 
