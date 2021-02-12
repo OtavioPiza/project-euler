@@ -106,7 +106,7 @@ def get_factors(number: int, primes: Tuple[int]) -> Tuple:
 
 
 @timed
-def solution_1(min_divisors=500):
+def solution_1(min_divisors=500) -> int:
     """
     This solution uses prime factorization and the fact that a triangular number is given by k * (k + 1) / 2, where k
     k + 1 are coprime to reuse the divisors of k + 1 in the next iteration of the algorithm
