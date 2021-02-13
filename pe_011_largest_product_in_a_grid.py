@@ -63,17 +63,6 @@ grid = tuple(map(lambda line: tuple(map(int, line.split(' '))),
 
 # noinspection DuplicatedCode
 def largest_product_in_series(series_size, number):
-    """
-    This solutions uses the fact that the next product in a series can be obtained by dividing the previous product by
-    its first term and multiplying it by the term after its last. Moreover, this solutions takes in account that once a
-    zero is found in a series, the number after it can become the next starting point since all products including it
-    would result in zero.
-
-    :param number:
-    :param series_size:
-    :return:
-    """
-
     start_index = 0
     product = 1
     answer = -1
@@ -117,6 +106,15 @@ def largest_product_in_series(series_size, number):
 
 @timed
 def solution_1(size=4):
+    """
+    This solutions uses the fact that the next product in a series can be obtained by dividing the previous product by
+    its first term and multiplying it by the term after its last. Moreover, this solutions takes in account that once a
+    zero is found in a series, the number after it can become the next starting point since all products including it
+    would result in zero.
+
+    :return:
+    """
+
     answer = -1
 
     for line in grid:
