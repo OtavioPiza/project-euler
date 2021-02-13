@@ -31,12 +31,18 @@ def solution_1(upper_limit: int = 1000000) -> int:
     longest = -1
     sequences = {-1: -1}
 
+    """
+    While it is the case that most numbers that produce the largest chains are odd, this does not always happen
+    """
     for number in range(1, upper_limit):
         current = number
         length = 1
 
         while current != 1:
 
+            """
+            If a number for which we have already calculated the sequence appears, be just add that sequence's length
+            """
             if current in sequences.keys():
                 length += sequences[current] - 1
                 break
@@ -48,11 +54,8 @@ def solution_1(upper_limit: int = 1000000) -> int:
         if length > sequences[longest]:
             longest = number
 
-    plt.bar(sequences.keys(), sequences.values())
-    plt.show()
-
     return longest
 
 
 if __name__ == '__main__':
-    print_answers('Longest Collatz Sequence', solution_1)
+    print_answers('Longest Collatz Sequence', solution_1, params=(1000000,))
