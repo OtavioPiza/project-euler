@@ -16,3 +16,17 @@ the bottom right, we will need to move left n times and right n times, we can ob
 combinatorics: How many distinct ways are there to choose n out of 2n places if order does not matter?
 """
 
+
+@timed
+def solution_1(grid_size: int = 20) -> int:
+    total_paths = 1
+
+    for i in range(grid_size):
+        total_paths *= (2 * grid_size) - i
+        total_paths //= i + 1
+
+    return total_paths
+
+
+if __name__ == '__main__':
+    print_answers("Lattice Paths", solution_1)
