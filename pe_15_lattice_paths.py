@@ -28,5 +28,24 @@ def solution_1(grid_size: int = 20) -> int:
     return total_paths
 
 
+# == Solution 2 ====================================================================================================== #
+"""
+We can also use dynamic programming, solving the problem in smaller parts.
+"""
+
+
+@timed
+def solution_2(grid_size: int = 20) -> int:
+    grid_size += 1
+    grid = [[0 if element != grid_size - 1 else 1 for element in range(grid_size)] for row in range(grid_size)]
+    grid[-1] = list(map(lambda element: 1, grid[-1]))
+
+    for i in range(grid_size - 2, -1, -1):
+        for j in range(grid_size - 2, -1, -1):
+            grid[i][j] = grid[i + 1][j] + grid[i][j + 1]
+
+    return grid[0][0]
+
+
 if __name__ == '__main__':
-    print_answers("Lattice Paths", solution_1)
+    print_answers("Lattice Paths", solution_1, solution_2, params=(20, ))
