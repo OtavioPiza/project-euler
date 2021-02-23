@@ -30,7 +30,8 @@ def solution_1(grid_size: int = 20) -> int:
 
 # == Solution 2 ====================================================================================================== #
 """
-We can also use dynamic programming, solving the problem in smaller parts.
+We can also use dynamic programming, solving the problem in smaller parts by writing how many different routes there are
+from any given point on the grid to the end. 
 """
 
 

@@ -10,9 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cce718c-fcbc-4f11-bc7e-721c54065902" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-euler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project-euler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pe_15_lattice_paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/pe_15_lattice_paths.py" afterDir="false" />
     </list>
@@ -222,7 +219,7 @@
       <workItem from="1612101207780" duration="16000" />
       <workItem from="1612109157888" duration="15438000" />
       <workItem from="1612139711919" duration="4821000" />
-      <workItem from="1614016880904" duration="4509000" />
+      <workItem from="1614016880904" duration="5206000" />
     </task>
     <servers />
   </component>
@@ -244,7 +241,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/project_euler$pe_14_longest_collatz_sequence.coverage" NAME="pe_14_longest_collatz_sequence Coverage Results" MODIFIED="1614017243399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project_euler$pe_012_highly_divisible_triangular_number.coverage" NAME="pe_012_highly_divisible_triangular_number Coverage Results" MODIFIED="1612131061017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/project_euler$pe_15_lattice_paths.coverage" NAME="pe_15_lattice_paths Coverage Results" MODIFIED="1614039556611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/project_euler$pe_15_lattice_paths.coverage" NAME="pe_15_lattice_paths Coverage Results" MODIFIED="1614039579583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project_euler$pe_003_largest_prime_factor.coverage" NAME="pe_003_largest_prime_factor Coverage Results" MODIFIED="1612130282606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project_euler$pe_13_large_sum.coverage" NAME="pe_13_large_sum Coverage Results" MODIFIED="1612144560161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
