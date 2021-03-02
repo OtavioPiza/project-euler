@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cce718c-fcbc-4f11-bc7e-721c54065902" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pe_18_maximum_path_sum.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +220,7 @@
       <workItem from="1612139711919" duration="4821000" />
       <workItem from="1614016880904" duration="5229000" />
       <workItem from="1614130380227" duration="358000" />
+      <workItem from="1614710516042" duration="244000" />
     </task>
     <servers />
   </component>
