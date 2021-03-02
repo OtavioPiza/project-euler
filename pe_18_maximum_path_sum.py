@@ -47,4 +47,4 @@ def solution_1(path: str = 'pe_18_maximum_path_sum.txt'):
 
 
 if __name__ == '__main__':
-    print_answers('Maximum Path Sum', solution_1)
+    print_answers('Maximum Path Sum', solution_1, params=('pe_18_maximum_path_sum.txt', ))
