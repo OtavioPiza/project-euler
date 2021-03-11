@@ -13,7 +13,7 @@ How many such routes are there through a 20×20 grid?
 They key to efficiently solving this problem is realizing that we can describe all the possible paths using only 'D' to
 represent down and 'L' to represent left. Because on an n x n grid in which we must start at the top right and move to 
 the bottom right, we will need to move left n times and right n times, we can obtain the total number of paths using
-combinatorics: How many distinct ways are there to choose n out of 2n places if order does not matter?
+combinatorics: How many distinct ways are there to choose n out of 2n?
 """
 
 
