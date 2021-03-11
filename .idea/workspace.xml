@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2cce718c-fcbc-4f11-bc7e-721c54065902" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pe_15_lattice_paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/pe_15_lattice_paths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pe_19_counting_sundays.py" beforeDir="false" afterPath="$PROJECT_DIR$/pe_19_counting_sundays.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +229,7 @@
       <workItem from="1614710516042" duration="853000" />
       <workItem from="1614711525282" duration="3685000" />
       <workItem from="1615382393474" duration="1186000" />
+      <workItem from="1615427248054" duration="326000" />
     </task>
     <servers />
   </component>
