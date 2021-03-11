@@ -1,4 +1,5 @@
-import pe_000_utils
+from pe_000_utils import timed, print_answers
+import datetime
 
 # == Project Euler: Problem 19 ======================================================================================= #
 """
@@ -15,3 +16,23 @@ You are given the following information, but you may prefer to do some research 
 
 How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 """
+
+# == Solution 1 ====================================================================================================== #
+
+
+@timed
+def solution_1() -> int:
+    total = 0
+
+    for year in range(1901, 2001, 1):
+
+        for month in range(1, 13, 1):
+
+            if datetime.date(year, month, 1).weekday() == 6:
+                total += 1
+
+    return total
+
+
+if __name__ == '__main__':
+    print_answers('Counting Sundays', solution_1)
