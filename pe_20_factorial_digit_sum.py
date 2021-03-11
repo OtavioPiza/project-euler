@@ -16,8 +16,7 @@ Find the sum of the digits in the number 100!
 
 @timed
 def solution_1(number: int = 100) -> int:
-    number = reduce(lambda a, b: a * b, range(1, number + 1))
-    return reduce(lambda a, b: int(a) + int(b), str(number))
+    return reduce(lambda a, b: int(a) + int(b), str(reduce(lambda a, b: a * b, range(1, number + 1))))
 
 
 if __name__ == '__main__':
