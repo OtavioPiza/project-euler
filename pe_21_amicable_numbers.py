@@ -1,4 +1,5 @@
 from pe_000_utils import timed, print_answers
+from pe_012_highly_divisible_triangular_number import get_primes
 
 # == Project Euler:  21 ============================================================================================== #
 """
@@ -14,5 +15,14 @@ Evaluate the sum of all the amicable numbers under 10000.
 # == Solution 1 ====================================================================================================== #
 
 
+@timed
+def solution_1(upper_bound: int = 10000) -> int:
+    primes = get_primes(upper_bound=upper_bound)
+
+
+
+    return -1
+
+
 if __name__ == '__main__':
-    print('Not implemented')
+    print_answers('Amicable Numbers', solution_1)
