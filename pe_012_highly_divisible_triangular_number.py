@@ -42,7 +42,7 @@ def next_candidate() -> Iterable:
         yield number
 
 
-def get_primes(quantity: int) -> Tuple:
+def get_primes(quantity: int = 0, upper_bound: int = 0) -> Tuple:
     primes = [2, 3, 5, 7]
 
     for number in next_candidate():
@@ -60,7 +60,7 @@ def get_primes(quantity: int) -> Tuple:
         if is_prime:
             primes.append(number)
 
-        if len(primes) == quantity:
+        if (quantity and len(primes) == quantity) or (upper_bound and primes[-1] >= upper_bound):
             return tuple(primes)
 
 
