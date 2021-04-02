@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="advanced-python" />
     <orderEntry type="module" module-name="py38" />
+    <orderEntry type="module" module-name="form-flooder" />
   </component>
 </module>
