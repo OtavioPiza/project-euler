@@ -42,7 +42,7 @@ def print_answers(name: str, *args: Tuple, params: Tuple = ()):
         print()
 
 
-def get_primes_eratosthenes_sieve():
+def get_primes_eratosthenes(upper_bound: int = 1):
 
     # TODO implement this
     return -1

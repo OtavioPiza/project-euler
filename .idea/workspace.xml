@@ -12,7 +12,6 @@
     <list default="true" id="2cce718c-fcbc-4f11-bc7e-721c54065902" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pe_000_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pe_000_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pe_21_amicable_numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/pe_21_amicable_numbers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +245,8 @@
       <workItem from="1617050002935" duration="402000" />
       <workItem from="1617068489154" duration="5000" />
       <workItem from="1617394976511" duration="64000" />
-      <workItem from="1617395079823" duration="1126000" />
+      <workItem from="1617395079823" duration="2386000" />
+      <workItem from="1617587658797" duration="879000" />
     </task>
     <servers />
   </component>
