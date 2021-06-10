@@ -1,6 +1,5 @@
 from matplotlib import pyplot as plt
 from typing import Any, NoReturn, Tuple, List
-from concurrent.futures import ThreadPoolExecutor
 
 
 def plot_range(params: Tuple[Tuple[Any], ...], functions: Tuple[(Any, )]) -> NoReturn:
@@ -9,7 +8,7 @@ def plot_range(params: Tuple[Tuple[Any], ...], functions: Tuple[(Any, )]) -> NoR
     index: int = 0
 
     for y_axis in y_axes:
-        plt.plot(x_axis, y_axis, label=f'line {(index := index + 1)}')
+        plt.plot(x_axis, y_axis, label=f'solution {(index := index + 1)}')
 
     plt.legend()
     plt.show()
