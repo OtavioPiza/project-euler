@@ -17,5 +17,7 @@ def plot_range(params: Tuple[Tuple[Any], ...], functions: Tuple[(Any, )]) -> NoR
     for y_axis in y_axes:
         plt.plot(x_axis, y_axis, label=f'solution {(index := index + 1)}')
 
+    plt.xlabel('input')
+    plt.ylabel('time')
     plt.legend()
     plt.show()
