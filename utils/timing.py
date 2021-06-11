@@ -1,6 +1,7 @@
 from functools import wraps
+from statistics import mean
 from time import perf_counter
-from typing import Tuple, Any, Dict
+from typing import Tuple, Any, Dict, List
 
 
 def timed(runs: int):
@@ -27,15 +28,15 @@ def timed(runs: int):
             :param kwargs: kwargs
             :return: (function result, time elapsed)
             """
-            time: float = 0
+            time: List[float] = []
             answer: Any = None
 
             for _ in range(runs):
                 elapsed = perf_counter()
                 answer = function(*args, **kwargs)
-                time += perf_counter() - elapsed
+                time.append(perf_counter() - elapsed)
 
-            return answer, time
+            return answer, mean(time)
 
         return wrapper
 
