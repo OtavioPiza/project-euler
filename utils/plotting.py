@@ -10,8 +10,8 @@ def plot_range(params: Tuple[Tuple[Any], ...], functions: Tuple[(Any, )]) -> NoR
     :param params: parameters for the functions
     :param functions: functions
     """
-    x_axis: List[Any, ...] = list(map(lambda i: i[0], params))
-    y_axes: List[List[float, ...]] = [[function(*param)[1] for param in params] for function in functions]
+    x_axis: List[Any] = list(map(lambda i: i[0], params))
+    y_axes: List[List[float]] = [[function(*param)[1] for param in params] for function in functions]
     index: int = 0
 
     for y_axis in y_axes:
