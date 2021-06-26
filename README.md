@@ -10,5 +10,6 @@ Ultimately, I choose to solve Project Euler's problems because, different from t
 
 ## Setting up
 
+This project is, except for some utilities, entirely written using Jupyter Notebooks. Among the many ways to host Jupyter Notebooks, the most popular are using Google Colab and creating a local server.
 
 ### Colab
