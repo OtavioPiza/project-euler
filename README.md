@@ -7,3 +7,8 @@ Problem-solving lies at the very heart of computer science. Finding efficient al
 ## Why Project Euler
 
 Ultimately, I choose to solve Project Euler's problems because, different from those hosted on sites such as HackerRank or LeetCode, they are more mathematical in nature. Furthermore, having considered pursuing a math major for most of my high school life, I find that Project Euler's problems provide an excellent opportunity to learn more about that field and enter a joyous journey into areas like number theory, which ultimately makes solving them and trying to create better algorithms much more enjoyable.
+
+## Setting up
+
+
+### Colab
