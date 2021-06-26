@@ -15,3 +15,23 @@ This project is, except for some utilities, entirely written using Jupyter Noteb
 ### Google Colab 
 
 At the bottom of this README, there is an index with the problems solved and an 'open in Colab' badge; clicking it will automatically redirect you to Google Colab, where you will run the code and save a copy on your drive.
+
+### Creating a Local Server
+
+The easiest way to set up Jupyter notebooks is using Anaconda. To download and install Jupyter Notebooks, run:
+
+```
+conda install -c conda-forge notebook
+```
+
+This project also uses **matplotlib** to create graphs, so if it is not already installed, run:
+
+```
+conda install -c conda-forge matplotlib 
+```
+
+Finally, on the folder with all the notebooks and in the conda environment with matplotlib, run:
+
+```
+jupyter notebook
+```
