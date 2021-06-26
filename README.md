@@ -12,10 +12,6 @@ Ultimately, I choose to solve Project Euler's problems because, different from t
 
 This project is, except for some utilities, entirely written using Jupyter Notebooks. Among the many ways to host Jupyter Notebooks, the most popular are using Google Colab and creating a local server.
 
-### Google Colab 
-
-At the bottom of this README, there is an index with the problems solved and an 'open in Colab' badge; clicking it will automatically redirect you to Google Colab, where you will run the code and save a copy on your drive.
-
 ### Creating a Local Server
 
 The easiest way to set up Jupyter notebooks is using Anaconda. To download and install Jupyter Notebooks, run:
@@ -35,9 +31,3 @@ Finally, on the folder with all the notebooks and in the conda environment with 
 ```
 jupyter notebook
 ```
-
-## Solved Problems
-
-| Problem | Google Colab |
-| ------- | ------------ |
-| 1 Mutiples of 3 and 5 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OtavioPiza/project-euler/blob/main/Problem+1+-+Multiples+of+3+and+5.ipynb) |
