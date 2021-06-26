@@ -35,3 +35,9 @@ Finally, on the folder with all the notebooks and in the conda environment with 
 ```
 jupyter notebook
 ```
+
+## Solved Problems
+
+| Problem | Google Colab |
+| ------- | ------------ |
+| 1 Mutiples of 3 and 5 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OtavioPiza/project-euler/blob/main/Problem+1+-+Multiples+of+3+and+5.ipynb) |
